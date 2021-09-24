@@ -2,10 +2,14 @@ package com.chrisvasqm.demorestapi.models;
 
 import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @DynamicUpdate
+@Entity
+@Table(name = "EMPLOYEES")
 public class Employee {
 
     @Id
@@ -13,6 +17,9 @@ public class Employee {
     private int id;
     private String name;
     private double salary;
+
+    public Employee() {
+    }
 
     public Employee(int id, String name, double salary) {
         this.id = id;
@@ -43,4 +50,5 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
 }
