@@ -14,7 +14,7 @@ public class Employee {
 
     @Id
     @GeneratedValue
-    private int id;
+    private long id;
     private String name;
     private double salary;
 
@@ -27,7 +27,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

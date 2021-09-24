@@ -17,4 +17,8 @@ public class EmployeeService {
         return employees.findAll();
     }
 
+    public Employee find(Long id) {
+        return employees.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("No employee was fond with the id: " + id));
+    }
 }
